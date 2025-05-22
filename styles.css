@@ -1,0 +1,79 @@
+/* 全局樣式 */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* 英雄區塊樣式 */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/1920/1080');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* 明星卡片樣式 */
+.star-card {
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.star-card:hover {
+    transform: translateY(-5px);
+}
+
+.star-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.star-info {
+    padding: 1rem;
+}
+
+/* 新聞卡片樣式 */
+.news-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+/* 愛心按鈕樣式 */
+.like-btn {
+    color: #dc3545;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.like-btn:hover {
+    transform: scale(1.2);
+}
+
+.like-btn.active {
+    animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
