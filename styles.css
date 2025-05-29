@@ -17,6 +17,27 @@ body {
     margin-bottom: 1rem;
 }
 
+/* 延遲載入圖片樣式 */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.lazy:not([src]) {
+    background-color: #f0f0f0;
+    animation: pulse-bg 1.5s infinite;
+}
+
+@keyframes pulse-bg {
+    0% { background-color: #f0f0f0; }
+    50% { background-color: #e0e0e0; }
+    100% { background-color: #f0f0f0; }
+}
+
+img:not(.lazy) {
+    opacity: 1;
+}
+
 /* 明星卡片樣式 */
 .star-card {
     transition: transform 0.3s ease;
